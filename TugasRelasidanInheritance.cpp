@@ -30,3 +30,31 @@ public:
 //Inisialisasi static member begin dari 0
 int User::globalId = 0;
 
+//Class Member Turunan dari User
+class Member : public User {
+private:
+    bool status; // true untuk on aktif, false untuk off non-aktif
+
+public:
+    Member(string pNama, string pEmail) : User(pNama, pEmail) {
+        this->status = true; // Default status aktif
+    }
+
+    void setStatus(bool pStatus) {
+        status = pStatus;
+    }
+
+    bool getStatus() {
+        return status;
+    }
+
+    void showProfile() {
+        cout << "=== Profile Member ===" << endl;
+        cout << "ID     : " << id << endl;
+        cout << "Nama   : " << nama << endl;
+        cout << "Email  : " << email << endl;
+        cout << "Status : " << (status ? "Aktif" : "Non-Aktif") << endl;
+        cout << "----------------------" << endl;
+    }
+};
+
