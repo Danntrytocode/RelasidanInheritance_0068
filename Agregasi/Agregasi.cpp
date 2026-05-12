@@ -14,4 +14,8 @@ int main()
     anak* varAnak1 = new anak("Vermillion");
     anak* varAnak2 = new anak("RTX 3090");
     anak* varAnak3 = new anak("RTX 5060");
+
+    varIbu->tambahAnak(varAnak1);
+    varIbu2->tambahAnak(varAnak2);
+    varIbu2->tambahAnak(varAnak3);
 }
