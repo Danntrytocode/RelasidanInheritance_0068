@@ -7,4 +7,11 @@
 
 using namespace std;
 
+class manusia {
+public:
+    //membuat member variabel
+    string name;
+    jantung varJantung;
+
+};
 #endif 
