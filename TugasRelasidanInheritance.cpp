@@ -73,4 +73,9 @@ public:
         }
     }
 
+    // Mengubah status aktif/non-aktif member
+    void toggleActivationMember(Member* m) {
+        m->setStatus(!m->getStatus());
+        cout << "Admin \"" << nama << "\" mengubah status member " << m->getNama() << endl;
+    }
 };
