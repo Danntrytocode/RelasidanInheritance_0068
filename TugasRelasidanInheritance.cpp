@@ -62,4 +62,15 @@ public:
 class Admin : public User {
 public:
     Admin(string pNama, string pEmail) : User(pNama, pEmail){}
+
+    // Menampilkan semua member dari daftar yang ada
+    void showAllMember(vector<Member*>& daftarMember) 
+    {
+        cout << "\n[Admin View] Daftar Semua Member:" << endl;
+        for (auto m : daftarMember) {
+            cout << "ID: " << m->getId() << " | Nama: " << m->getNama() 
+                 << " | Status: " << (m->getStatus() ? "Aktif" : "Mati") << endl;
+        }
+    }
+
 };
