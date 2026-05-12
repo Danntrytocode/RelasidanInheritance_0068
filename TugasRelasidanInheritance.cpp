@@ -27,3 +27,6 @@ public:
     string getNama() { return nama; }
 };
 
+//Inisialisasi static member begin dari 0
+int User::globalId = 0;
+
