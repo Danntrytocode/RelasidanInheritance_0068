@@ -79,3 +79,30 @@ public:
         cout << "Admin \"" << nama << "\" mengubah status member " << m->getNama() << endl;
     }
 };
+
+int main() {
+    // Membuat Atmin
+    Admin adminUtama("Palembang", "admin@web.com");
+
+    // Membuat beberapa Member
+    vector<Member*> listMember;
+    listMember.push_back(new Member("Budi01", "budi@mail.com"));
+    listMember.push_back(new Member("Aniani", "ani@mail.com"));
+
+    // Member melihat profil sendiri
+    listMember[0]->showProfile();
+
+    // Atmin melihat semua member
+    adminUtama.showAllMember(listMember);
+
+    // Atmin mematikan status member pertama
+    adminUtama.toggleActivationMember(listMember[0]);
+
+    // Atmin cek lagi
+    adminUtama.showAllMember(listMember);
+
+    // Cleanup memori/y
+    for (auto m : listMember) delete m;
+
+    return 0;
+}
