@@ -14,6 +14,13 @@ public:
     //deklarasi member
     string nama;
     vector<anak*> daftar_anak;
+    //create constructor dan destructor pada class ibu
+    ibu(string pnama) : nama(pnama) {
+        cout << "Ibu \"" << nama << "\" ada\n";
+    }
+    ~ibu() {
+        cout << "Ibu \"" << nama << "\" tidak ada\n";
+    }
 };
 
 #endif
